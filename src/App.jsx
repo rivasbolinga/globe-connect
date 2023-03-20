@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Paintings from './components/Paintings';
 import './App.css'
 
 function App() {
@@ -9,7 +11,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route path="/" element={<Paintings />} />
-            <Route path="/country/:countryId" element={<PaintingDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>
