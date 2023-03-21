@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const { isOpen } = useSelector((state) => state.modal)
-  console.log(isOpen)
   return (
     <div className="App">
       {isOpen && <Modal />}

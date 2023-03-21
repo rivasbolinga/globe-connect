@@ -27,19 +27,19 @@ const Modal = () => {
         <div className="options">
           <div>
             <input type="radio" value="Africa" id="Africa"></input>
-            <label for="Africa">Africa</label>
+            <label htmlFor="Africa">Africa</label>
           </div>
           <div>
             <input type="radio" value="Asia" id="Asia"></input>
-            <label for="Asia">Asia</label>
+            <label htmlFor="Asia">Asia</label>
           </div>
           <div>
             <input type="radio" value="Europe" id="Europe"></input>
-            <label for="Europe">Europe</label>
+            <label htmlFor="Europe">Europe</label>
           </div>
           <div>
             <input type="radio" value="Africa" id="Africa"></input>
-            <label for="Africa">Africa</label>
+            <label htmlFor="Africa">Africa</label>
           </div>
           <div>
             <input
@@ -47,7 +47,7 @@ const Modal = () => {
               value="North America"
               id="North America"
             ></input>
-            <label for="North America">North America</label>
+            <label htmlFor="North America">North America</label>
           </div>
           <div>
             <input
@@ -55,15 +55,15 @@ const Modal = () => {
               value="South America"
               id="South America"
             ></input>
-            <label for="South America">South America</label>
+            <label htmlFor="South America">South America</label>
           </div>
           <div>
             <input type="radio" value="Oceania" id="Oceania"></input>
-            <label for="Oceania">Oceania</label>
+            <label htmlFor="Oceania">Oceania</label>
           </div>
           <div>
             <input type="radio" value="Antarctica" id="Antarctica"></input>
-            <label for="Antarctica">Antarctica</label>
+            <label htmlFor="Antarctica">Antarctica</label>
           </div>
         </div>
       </div>
