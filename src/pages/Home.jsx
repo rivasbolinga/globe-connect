@@ -1,24 +1,33 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import styled from 'styled-components'
-import { fetchCountries, selectCountries } from '../redux/countriesSlice'
-import Countries from '../components/Countries'
+import React, { useEffect, useState} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
+import { fetchCountries, selectCountries } from '../redux/countriesSlice';
+import Countries from '../components/Countries';
+import Modal from '../components/Modal'
+
 const Home = () => {
   const dispatch = useDispatch()
   const countries = useSelector(selectCountries)
-  
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     if (!countries.length) {
       dispatch(fetchCountries())
     }
   }),
     [dispatch, countries]
+  const toggleModal = () => {
+    setIsOpen(true)
+  }
+
   return (
     <Wrapper>
       <div>
         <h1>Countries</h1>
-        <button>settings</button>
+        <button type="button" onClick={toggleModal}> settings</button>
       </div>
+      {isOpen && <Modal setIsOpen={setIsOpen}/>}
+
       {countries.map((country) => (
         <Countries
           key={country.cca3}
