@@ -1,9 +1,25 @@
-import styled from 'styled-components'
-const Modal = ({ setIsOpen }) => {
+import styled from 'styled-components';
+import { closeModal } from '../redux/modalSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectSelectedContinent,selectContinent } from '../redux/modalSlice';
+
+const Modal = () => {
+   const selectedContinent = useSelector(selectSelectedContinent)
+   const dispatch = useDispatch()
+
+   const handleSelectContinent = (continent) => {
+     dispatch(selectContinent(continent))
+   }
+
   return (
     <Wrapper>
       <div>
-        <button type="button" onClick={() => setIsOpen(false)}>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(closeModal())
+          }}
+        >
           close
         </button>
         <h2>Select Continent</h2>

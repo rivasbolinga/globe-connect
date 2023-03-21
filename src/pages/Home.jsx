@@ -3,12 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { fetchCountries, selectCountries } from '../redux/countriesSlice';
 import Countries from '../components/Countries';
-import Modal from '../components/Modal'
-
+import { openModal } from '../redux/modalSlice';
 const Home = () => {
   const dispatch = useDispatch()
   const countries = useSelector(selectCountries)
-  const [isOpen, setIsOpen] = useState(false);
+
 
   useEffect(() => {
     if (!countries.length) {
@@ -16,18 +15,13 @@ const Home = () => {
     }
   }),
     [dispatch, countries]
-  const toggleModal = () => {
-    setIsOpen(true)
-  }
-
+  
   return (
     <Wrapper>
       <div>
         <h1>Countries</h1>
-        <button type="button" onClick={toggleModal}> settings</button>
+        <button type="button" onClick={()=>dispatch(openModal())}> settings</button>
       </div>
-      {isOpen && <Modal setIsOpen={setIsOpen}/>}
-
       {countries.map((country) => (
         <Countries
           key={country.cca3}
