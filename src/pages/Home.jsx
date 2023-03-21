@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { useParams, useNavigate } from 'react-router-dom'
 import { fetchCountries, selectCountries } from '../redux/countriesSlice'
-import SingleCountry from './SingleCountryPage'
 import Countries from '../components/Countries'
 const Home = () => {
   const dispatch = useDispatch()
