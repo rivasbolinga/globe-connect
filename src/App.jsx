@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SingleCountry from './pages/SingleCountryPage'
-import Countries from './components/Countries';
+import Home from './pages/Home';
 import './App.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Countries />} />
+          <Route path="/" element={<Home />} />
           <Route path="country/:id" element={<SingleCountry />} />
         </Routes>
       </BrowserRouter>
