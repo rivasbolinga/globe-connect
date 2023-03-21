@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useParams, useNavigate } from 'react-router-dom';
-import { fetchCountries, selectCountries } from '../redux/countriesSlice';
- 
-const Countries = ({num, flag, name, capital, population,region }) => {
 
- 
+const Countries = ({num, flag, name, capital, population,region }) => {
  return (
    <Wrapper className="country-card">
      <Link to={`/country/${num}`} className="link">
