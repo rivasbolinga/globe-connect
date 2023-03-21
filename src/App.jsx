@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import Paintings from './components/Paintings';
+import SingleCountry from './pages/SingleCountryPage'
+import Home from './pages/Home';
 import './App.css'
 
 function App() {
@@ -9,9 +9,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-      
-            <Route path="/" element={<Paintings />} />
-
+          <Route path="/" element={<Home />} />
+          <Route path="country/:id" element={<SingleCountry />} />
         </Routes>
       </BrowserRouter>
     </div>
