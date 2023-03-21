@@ -81,12 +81,14 @@ return (
                 <p key={curr.name}>{curr.symbol}</p>
               ))}
             </div>
+            {country.borders && (
             <div className="detail">
               <h4>Borders</h4>
               {Object.values(country.borders).map((country) => (
                 <p key={country}>{country}</p>
               ))}
             </div>
+            )}
             <div className="detail">
               <h4>Native common name</h4>
               {Object.values(country.name.nativeName).map((native) => (
