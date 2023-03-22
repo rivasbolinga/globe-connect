@@ -39,7 +39,7 @@ const SingleCountry = () => {
           <div className="country-details">
             <div className="detail">
               <h4>Capital</h4>
-              <p>{country.capital[0]}</p>
+              <p>{country.capital ? country.capital[0] : "No capital in this country"}</p>
             </div>
             <div className="detail">
               <h4>Region</h4>
@@ -69,15 +69,15 @@ const SingleCountry = () => {
             </div>
             <div className="detail">
               <h4>Currency</h4>
-              {Object.values(country.currencies).map((curr) => (
+              {country.currencies ? Object.values(country.currencies).map((curr) => (
                 <p key={curr.name}>{curr.name}</p>
-              ))}
+              )) : "No money here"}
             </div>
             <div className="detail">
               <h4>Currency symbol</h4>
-              {Object.values(country.currencies).map((curr) => (
+              {country.currencies ? Object.values(country.currencies).map((curr) => (
                 <p key={curr.name}>{curr.symbol}</p>
-              ))}
+              )): "No money"}
             </div>
             {country.borders && (
             <div className="detail">
