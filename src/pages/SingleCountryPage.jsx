@@ -1,30 +1,28 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { fetchCountries, selectCountries } from '../redux/countriesSlice';
-import { Link } from 'react-router-dom';
 
 const SingleCountry = () => {
   const { id } = useParams();
-const dispatch = useDispatch();
-const { countries } = useSelector(selectCountries);
+  const dispatch = useDispatch();
+  const { countries } = useSelector(selectCountries);
 
-useEffect(() => {
-  if (!countries.length) {
-    dispatch(fetchCountries())
-  }
-}),
-  [countries, dispatch]
+  useEffect(() => {
+    if (!countries.length) {
+      dispatch(fetchCountries());
+    }
+  }, [countries, dispatch]);
+
   const country = countries.find((country) => country.cca3 === id);
-  console.log(country);
-return (
-  <Wrapper>
-    {country && (
+  return (
+    <Wrapper>
+      {country && (
       <div>
         <div className="header">
           <Link to="/" className="link">
-            <button>back</button>
+            <button type="button">back</button>
           </Link>
           <h2>Country details</h2>
         </div>
@@ -33,7 +31,7 @@ return (
             src={country.flags.png}
             alt={country.flags.alt}
             className="flag"
-          ></img>
+          />
           <h1>{country.name.common}</h1>
         </div>
         <div className="country-details-container">
@@ -104,12 +102,12 @@ return (
           </div>
         </div>
       </div>
-    )}
-  </Wrapper>
-)
-}
+      )}
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
-`
+`;
 
-export default SingleCountry
+export default SingleCountry;

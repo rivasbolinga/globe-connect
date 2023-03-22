@@ -1,26 +1,26 @@
 import styled from 'styled-components';
-import { closeModal } from '../redux/modalSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectSelectedContinent,selectContinent, clearContinent } from '../redux/modalSlice';
+import {
+  closeModal, selectSelectedContinent, selectContinent, clearContinent,
+} from '../redux/modalSlice';
 import { filter } from '../redux/countriesSlice';
 
 const Modal = () => {
-   const selectedContinent = useSelector(selectSelectedContinent);
-   console.log(selectedContinent)
-   const dispatch = useDispatch()
+  const selectedContinent = useSelector(selectSelectedContinent);
+  const dispatch = useDispatch();
 
- const handleSelectContinent = (continent) => {
-   if (continent === 'All') {
-     dispatch(clearContinent())
-     dispatch(closeModal())
-   } else {
-     dispatch(selectContinent(continent))
-     dispatch(closeModal())
-   }
-   dispatch(closeModal())
-   dispatch(filter())
-   dispatch(closeModal())
- }
+  const handleSelectContinent = (continent) => {
+    if (continent === 'All') {
+      dispatch(clearContinent());
+      dispatch(closeModal());
+    } else {
+      dispatch(selectContinent(continent));
+      dispatch(closeModal());
+    }
+    dispatch(closeModal());
+    dispatch(filter());
+    dispatch(closeModal());
+  };
 
   return (
     <Wrapper>
@@ -28,13 +28,14 @@ const Modal = () => {
         <button
           type="button"
           onClick={() => {
-            dispatch(closeModal())
+            dispatch(closeModal());
           }}
         >
           close
         </button>
         <h2>Select Continent</h2>
-        <div className="line"></div>
+        <div className="line" />
+        {/* eslint-disable jsx-a11y/label-has-associated-control */}
         <div className="options">
           <div>
             <input
@@ -43,7 +44,7 @@ const Modal = () => {
               id="All"
               checked={!selectedContinent}
               onChange={() => handleSelectContinent('All')}
-            ></input>
+            />
             <label htmlFor="All">All</label>
           </div>
           <div>
@@ -53,7 +54,7 @@ const Modal = () => {
               id="Africa"
               checked={selectedContinent === 'Africa'}
               onChange={() => handleSelectContinent('Africa')}
-            ></input>
+            />
             <label htmlFor="Africa">Africa</label>
           </div>
           <div>
@@ -63,7 +64,7 @@ const Modal = () => {
               id="Asia"
               checked={selectedContinent === 'Asia'}
               onChange={() => handleSelectContinent('Asia')}
-            ></input>
+            />
             <label htmlFor="Asia">Asia</label>
           </div>
           <div>
@@ -73,7 +74,7 @@ const Modal = () => {
               id="Europe"
               checked={selectedContinent === 'Europe'}
               onChange={() => handleSelectContinent('Europe')}
-            ></input>
+            />
             <label htmlFor="Europe">Europe</label>
           </div>
           <div>
@@ -83,7 +84,7 @@ const Modal = () => {
               id="North America"
               checked={selectedContinent === 'North America'}
               onChange={() => handleSelectContinent('North America')}
-            ></input>
+            />
             <label htmlFor="North America">North America</label>
           </div>
           <div>
@@ -93,7 +94,7 @@ const Modal = () => {
               id="South America"
               checked={selectedContinent === 'South America'}
               onChange={() => handleSelectContinent('South America')}
-            ></input>
+            />
             <label htmlFor="South America">South America</label>
           </div>
           <div>
@@ -103,7 +104,7 @@ const Modal = () => {
               id="Oceania"
               checked={selectedContinent === 'Oceania'}
               onChange={() => handleSelectContinent('Oceania')}
-            ></input>
+            />
             <label htmlFor="Oceania">Oceania</label>
           </div>
           <div>
@@ -113,19 +114,19 @@ const Modal = () => {
               id="Antarctica"
               checked={selectedContinent === 'Antarctica'}
               onChange={() => handleSelectContinent('Antarctica')}
-            ></input>
+            />
             <label htmlFor="Antarctica">Antarctica</label>
           </div>
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 const Wrapper = styled.section`
 width: 90%;
 height:90%;
 background-color: white;
 color:black;
-`
+`;
 
 export default Modal;
