@@ -90,8 +90,17 @@ const CountryDetailed = ({
     {' '}
   </Wrapper>
 );
+CountryDetailed.defaultProps = {
+  capital: '',
+  currency: '',
+  borders: '',
+  nativeName: '',
+  languages: '',
+};
+
 CountryDetailed.propTypes = {
-  flag: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  flag: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    .isRequired,
   name: PropTypes.string.isRequired,
   officialName: PropTypes.string.isRequired,
   capital: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
@@ -99,10 +108,26 @@ CountryDetailed.propTypes = {
   region: PropTypes.string.isRequired,
   subregion: PropTypes.string.isRequired,
   tld: PropTypes.string.isRequired,
-  currency: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  borders: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  nativeName: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  languages: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  currency: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.array,
+  ]),
+  borders: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  nativeName: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  languages: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
 };
 export default CountryDetailed;
 

@@ -28,7 +28,7 @@ const SingleCountry = () => {
             <h2>Country details</h2>
           </div>
           <CountryDetailed
-            key={country.cca3}
+            key={id}
             flag={country.flags}
             name={country.name.common}
             capital={country.capital}

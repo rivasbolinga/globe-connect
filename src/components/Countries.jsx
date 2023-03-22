@@ -8,7 +8,7 @@ const Countries = ({
 }) => (
   <Wrapper className="country-card">
     <Link to={`/country/${num}`} className="link">
-      <img src={flag.png} className="flag" />
+      <img src={flag.png} alt={flag.alt} className="flag" />
       <h2>{name}</h2>
       <p>
         <span>Capital:</span>
@@ -33,11 +33,15 @@ const Countries = ({
 // use of oneOfType because capital can come as sting or array (or not  capital at all).
 Countries.propTypes = {
   num: PropTypes.string.isRequired,
-  flag: PropTypes.object.isRequired,
+  flag: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   name: PropTypes.string.isRequired,
   capital: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   population: PropTypes.number.isRequired,
   region: PropTypes.string.isRequired,
+};
+
+Countries.defaultProps = {
+  capital: 'No capital',
 };
 
 const Wrapper = styled.section`
