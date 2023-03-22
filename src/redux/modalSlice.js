@@ -16,6 +16,7 @@ const modalSlice = createSlice({
       state.isOpen = false
     },
     selectContinent: (state, action) => {
+      console.log('You have selected a continent', action.payload)
       state.selectedContinent = action.payload
     },
     clearContinent: (state) => {

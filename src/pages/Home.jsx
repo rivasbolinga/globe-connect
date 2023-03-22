@@ -1,28 +1,36 @@
-import React, { useEffect, useState} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import styled from 'styled-components';
-import { fetchCountries, selectCountries } from '../redux/countriesSlice';
-import Countries from '../components/Countries';
-import { openModal } from '../redux/modalSlice';
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import styled from 'styled-components'
+import { fetchCountries, selectCountries } from '../redux/countriesSlice'
+import Countries from '../components/Countries'
+import { openModal } from '../redux/modalSlice'
+import { selectSelectedContinent } from '../redux/modalSlice'
+
 const Home = () => {
   const dispatch = useDispatch()
-  const countries = useSelector(selectCountries)
-
+  const { countries } = useSelector(selectCountries)
+  const selectedContinent = useSelector(selectSelectedContinent)
 
   useEffect(() => {
     if (!countries.length) {
       dispatch(fetchCountries())
     }
-  }),
-    [dispatch, countries]
-  
+  }, [dispatch, countries])
+
+  const filteredCountries = countries.filter((country) =>
+    country.continents.includes(selectedContinent)
+  )
+
   return (
     <Wrapper>
       <div>
         <h1>Countries</h1>
-        <button type="button" onClick={()=>dispatch(openModal())}> settings</button>
+        <button type="button" onClick={() => dispatch(openModal())}>
+          {' '}
+          settings
+        </button>
       </div>
-      {countries.map((country) => (
+      {filteredCountries.map((country) => (
         <Countries
           key={country.cca3}
           num={country.cca3}
@@ -49,4 +57,4 @@ const Wrapper = styled.section`
   }
 `
 
-export default Home;
+export default Home

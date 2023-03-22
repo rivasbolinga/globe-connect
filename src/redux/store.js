@@ -5,8 +5,8 @@ import modalReducer from './modalSlice';
 
 const store = configureStore({
   reducer: {
-    countries: countriesReducer,
     modal: modalReducer,
+    countries: countriesReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 })

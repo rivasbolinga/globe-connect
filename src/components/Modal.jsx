@@ -5,12 +5,13 @@ import { selectSelectedContinent,selectContinent } from '../redux/modalSlice';
 import { filter } from '../redux/countriesSlice';
 
 const Modal = () => {
-   const selectedContinent = useSelector(selectSelectedContinent)
+   const selectedContinent = useSelector(selectSelectedContinent);
+   console.log(selectedContinent)
    const dispatch = useDispatch()
 
    const handleSelectContinent = (continent) => {
      dispatch(selectContinent(continent))
-     dispatch(filter());
+     dispatch(filter())
    }
 
   return (
@@ -106,6 +107,7 @@ const Wrapper = styled.section`
 width: 90%;
 height:90%;
 background-color: white;
+color:black;
 `
 
 export default Modal
