@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const SingleCountry = () => {
   const { id } = useParams();
 const dispatch = useDispatch();
-const countries = useSelector(selectCountries);
+const { countries } = useSelector(selectCountries);
 
 useEffect(() => {
   if (!countries.length) {
