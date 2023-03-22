@@ -8,7 +8,8 @@ import { filter } from '../redux/countriesSlice';
 const Modal = () => {
   const selectedContinent = useSelector(selectSelectedContinent);
   const dispatch = useDispatch();
-
+  // -- If continent selected is all, clear continent (in case there was one selected)
+  // Rest of selections, we dispatch selectContinent from redux slice and close modal.
   const handleSelectContinent = (continent) => {
     if (continent === 'All') {
       dispatch(clearContinent());

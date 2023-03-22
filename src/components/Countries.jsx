@@ -2,27 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
-const Countries = ({ num, flag, name, capital, population, region }) => (
+// -- Countries component receiving props from dispatch fetchCountries in HomePage
+const Countries = ({
+  num, flag, name, capital, population, region,
+}) => (
   <Wrapper className="country-card">
     <Link to={`/country/${num}`} className="link">
       <img src={flag.png} className="flag" />
       <h2>{name}</h2>
       <p>
-        <span>Capital:</span>{' '}
+        <span>Capital:</span>
+        {' '}
+        {/* For the cases where there is not capital */}
         {capital && capital.length > 0 ? capital : 'Has no capital'}
       </p>
       <p>
-        <span>Population:</span>{' '}
-        {population ? population : 'Ups! nobody leaves here'}
+        {/* cases with not population */}
+        <span>Population:</span>
+        {' '}
+        {population || 'Ups! nobody leaves here'}
       </p>
       <p>
-        <span>Region:</span> {region}
+        <span>Region:</span>
+        {' '}
+        {region}
       </p>
     </Link>
   </Wrapper>
-)
-
+);
+// use of oneOfType because capital can come as sting or array (or not  capital at all).
 Countries.propTypes = {
   num: PropTypes.string.isRequired,
   flag: PropTypes.object.isRequired,
@@ -30,7 +38,7 @@ Countries.propTypes = {
   capital: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   population: PropTypes.number.isRequired,
   region: PropTypes.string.isRequired,
-}
+};
 
 const Wrapper = styled.section`
   border: 1px solid;
