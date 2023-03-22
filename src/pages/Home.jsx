@@ -30,17 +30,29 @@ const Home = () => {
           settings
         </button>
       </div>
-      {filteredCountries.map((country) => (
-        <Countries
-          key={country.cca3}
-          num={country.cca3}
-          flag={country.flags}
-          name={country.name.common}
-          capital={country.capital}
-          population={country.population}
-          region={country.region}
-        />
-      ))}
+      {filteredCountries.length
+        ? filteredCountries.map((country) => (
+            <Countries
+              key={country.cca3}
+              num={country.cca3}
+              flag={country.flags}
+              name={country.name.common}
+              capital={country.capital}
+              population={country.population}
+              region={country.region}
+            />
+          ))
+        : countries.map((country) => (
+            <Countries
+              key={country.cca3}
+              num={country.cca3}
+              flag={country.flags}
+              name={country.name.common}
+              capital={country.capital}
+              population={country.population}
+              region={country.region}
+            />
+          ))}
     </Wrapper>
   )
 }
@@ -57,4 +69,4 @@ const Wrapper = styled.section`
   }
 `
 
-export default Home
+export default Home;

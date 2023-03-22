@@ -17,10 +17,10 @@ const modalSlice = createSlice({
     },
     selectContinent: (state, action) => {
       console.log('You have selected a continent', action.payload)
-      state.selectedContinent = action.payload
+      state.selectedContinent = action.payload;
     },
     clearContinent: (state) => {
-      state.selectedContinent = null
+      state.selectedContinent = null;
     },
   },
 })

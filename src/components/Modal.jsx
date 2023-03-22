@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { closeModal } from '../redux/modalSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectSelectedContinent,selectContinent } from '../redux/modalSlice';
+import { selectSelectedContinent,selectContinent, clearContinent } from '../redux/modalSlice';
 import { filter } from '../redux/countriesSlice';
 
 const Modal = () => {
@@ -9,10 +9,18 @@ const Modal = () => {
    console.log(selectedContinent)
    const dispatch = useDispatch()
 
-   const handleSelectContinent = (continent) => {
+ const handleSelectContinent = (continent) => {
+   if (continent === 'All') {
+     dispatch(clearContinent())
+     dispatch(closeModal())
+   } else {
      dispatch(selectContinent(continent))
-     dispatch(filter())
+     dispatch(closeModal())
    }
+   dispatch(closeModal())
+   dispatch(filter())
+   dispatch(closeModal())
+ }
 
   return (
     <Wrapper>
@@ -28,6 +36,16 @@ const Modal = () => {
         <h2>Select Continent</h2>
         <div className="line"></div>
         <div className="options">
+          <div>
+            <input
+              type="radio"
+              value="All"
+              id="All"
+              checked={!selectedContinent}
+              onChange={() => handleSelectContinent('All')}
+            ></input>
+            <label htmlFor="All">All</label>
+          </div>
           <div>
             <input
               type="radio"
@@ -110,4 +128,4 @@ background-color: white;
 color:black;
 `
 
-export default Modal
+export default Modal;
