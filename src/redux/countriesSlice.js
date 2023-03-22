@@ -16,22 +16,22 @@ export const fetchCountries = createAsyncThunk(
 const countriesSlice = createSlice({
   name: 'countries',
   initialState: { countries: [] },
-  reducers: {
+   reducers: {
     filter: (state, action) => {
-      const selectedContinent = selectSelectedContinent(state)
-      if (selectedContinent === 'All') {
-        return {
-          ...state,
-          countries: state.countries,
-        }
-      }
-      return {
-        ...state,
-        countries: state.countries.filter((country) =>
-          country.continents.includes(selectedContinent)
-        ),
-      }
-    },
+  const selectedContinent = selectSelectedContinent(state)
+  if (selectedContinent === "All") {
+    return {
+      ...state,
+      countries: state.countries
+    }
+  }
+  return {
+    ...state,
+    countries: state.countries.filter((country) =>
+      country.continents.includes(selectedContinent)
+    )
+  }
+}
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCountries.fulfilled, (state, action) => {

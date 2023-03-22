@@ -27,4 +27,7 @@ const modalSlice = createSlice({
 
 export default modalSlice.reducer
 export const { openModal, closeModal, selectContinent,clearContinent } = modalSlice.actions;
-export const selectSelectedContinent = (state) => state.modal.selectedContinent;
+export const selectSelectedContinent = (state) =>
+  state.modal ? state.modal.selectedContinent : null
+
+
