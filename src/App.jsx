@@ -1,12 +1,12 @@
+import { useSelector } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SingleCountry from './pages/SingleCountryPage';
 import Home from './pages/Home';
 import './App.css';
 import Modal from './components/Modal';
-import { useSelector } from 'react-redux';
 
 function App() {
-  const { isOpen } = useSelector((state) => state.modal)
+  const { isOpen } = useSelector((state) => state.modal);
   return (
     <div className="App">
       {isOpen && <Modal />}
@@ -17,7 +17,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
