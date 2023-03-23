@@ -48,47 +48,65 @@ const CountryDetailed = ({
         </div>
         <div className="detail">
           <h4>Languages</h4>
-          {Object.values(languages).map((lang) => (
-            <p key={lang}>{lang}</p>
-          ))}
+          <div className="borders">
+            {Object.values(languages).map((lang) => (
+              <p className="borders-text" key={lang}>
+                {lang}
+              </p>
+            ))}
+          </div>
         </div>
         {currency && (
           <div className="detail">
             <h4>Currency symbol</h4>
-            {Object.values(currency).map((curr) => (
-              <p key={curr.name}>{curr.symbol}</p>
-            ))}
+            <div className="borders">
+              {Object.values(currency).map((curr) => (
+                <p className='borders-text' key={curr.name}>{curr.symbol}</p>
+              ))}
+            </div>
           </div>
         )}
         {currency && (
           <div className="detail">
             <h4>Currency</h4>
-            {Object.values(currency).map((curr) => (
-              <p key={curr.name}>{curr.name}</p>
-            ))}
+            <div className="borders">
+              {Object.values(currency).map((curr) => (
+                <p className="borders-text" key={curr.name}>
+                  {curr.name}
+                </p>
+              ))}
+            </div>
           </div>
         )}
         {borders && (
           <div className="detail">
             <h4>Borders</h4>
-            <div className='borders'>
+            <div className="borders">
               {Object.values(borders).map((country) => (
-                <p key={country}>{country}</p>
+                <p className='borders-text' key={country}>{country}</p>
               ))}
             </div>
           </div>
         )}
         <div className="detail">
           <h4>Native common name</h4>
-          {Object.values(nativeName).map((native) => (
-            <p key={native.common}>{native.common}</p>
-          ))}
+          <div className="borders">
+            {Object.values(nativeName).map((native) => (
+              <p className="borders-text" key={native.common}>
+                {native.common}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="detail">
           <h4>Native official name</h4>
-          {Object.values(nativeName).map((native) => (
-            <p key={native.official}>{native.official}</p>
-          ))}
+          <div className="borders">
+            {Object.values(nativeName).map((native) => (
+              <p className="borders-text" key={native.official}>
+                {native.official}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>{' '}
@@ -165,7 +183,11 @@ const Wrapper = styled.section`
       text-align: center;
     }
     .borders {
-      width: 20%;
+      width: 30%;
+      text-align: center;
+    }
+    .borders-text {
+      width: 100%;
     }
   }
  
