@@ -174,9 +174,10 @@ npx eslint "**/*.{js,jsx}"
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank - [ Microverse]
+I would like to thank 
+- [ Microverse]
  **![](https://img.shields.io/badge/Microverse-blueviolet)**
-
+- Original design idea by Nelson Sakwa on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
