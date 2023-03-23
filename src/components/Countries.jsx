@@ -28,12 +28,12 @@ const Countries = ({
 );
 // use of oneOfType because capital can come as sting or array (or not  capital at all).
 Countries.propTypes = {
-  num: PropTypes.string.isRequired,
+  num: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   flag: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   name: PropTypes.string.isRequired,
   capital: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   region: PropTypes.string.isRequired,
-};
+}
 
 Countries.defaultProps = {
   capital: 'No capital',
