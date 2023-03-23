@@ -74,7 +74,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can see the live version 📍 [here](https://style--fluffy-khapse-6a9aff.netlify.app/)
+You can see the live version 📍 [here](https://lucent-yeot-9e456d.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
