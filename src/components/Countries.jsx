@@ -33,7 +33,7 @@ Countries.propTypes = {
   name: PropTypes.string.isRequired,
   capital: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   region: PropTypes.string.isRequired,
-}
+};
 
 Countries.defaultProps = {
   capital: 'No capital',
