@@ -48,6 +48,7 @@ const Home = () => {
           />
         )}
       </div>
+
       <div className="how-many">
         <h3>
           {selectedContinent || 'How many countries there are in the world?'}
@@ -86,6 +87,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
   background-color: white;
   .header {
     display: flex;
@@ -95,16 +97,25 @@ const Wrapper = styled.section`
     align-items: center;
     img {
       width: 60px;
-      height: 60px;
     }
+  }
+  .picture-container {
+    margin-top: 10px;
+    width: 280px;
+    height: auto;
+    border: 5px solid #bababa;
   }
   .picture {
     width: 100%;
+    height: 100%;
   }
   .how-many {
+    width: 100%;
+    margin-top: 10px;
     color: #182734;
     border-bottom: 2px solid #182734;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
   }
   .country-list {
     display: grid;
@@ -113,6 +124,11 @@ const Wrapper = styled.section`
   }
   @media (min-width: 425px) {
     width: 425px;
+    .picture-container {
+      width: 400px;
+      height: auto;
+      border: 5px solid #bababa;
+    }
   }
 `;
 

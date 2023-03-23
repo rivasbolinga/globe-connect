@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Countries component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-beqWaB bBCdOB country-card"
+  >
+    <a
+      class="link"
+      href="/country/1"
+    >
+      <img
+        alt="Flag"
+        class="flag"
+        src="flag.png"
+      />
+      <div
+        class="text"
+      >
+        <h2>
+          Country
+        </h2>
+        <p>
+          <span>
+            Capital:
+          </span>
+           
+          Capital
+        </p>
+        <p>
+          <span>
+            Continent:
+          </span>
+           
+          Continent
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+`;

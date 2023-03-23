@@ -12,7 +12,7 @@ const continentImages = {
     'http://images.mapsofworld.com/australia-and-oceania/australia-ocenia-political-map.jpg',
   Asia: 'https://www.freeworldmaps.net/asia/asia-political-map.jpg',
   Antarctica:
-    'http://travelsfinders.com/wp-content/uploads/2017/08/antarctic-region-map_1.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/7/7f/Antarctic_Ocean_relief_location_map.png',
 };
 
 export default continentImages;

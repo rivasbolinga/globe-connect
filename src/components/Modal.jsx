@@ -130,17 +130,17 @@ const Wrapper = styled.section`
   border: 4px solid white;
   background-color: white;
   color: white;
-  position: fixed;
-  top: 20%;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   background-color: #535bf2;
   padding: 10px;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_Map_Blank.svg/1600px-World_Map_Blank.svg.png');
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 130px;
-
-  button {
+  transform: translate(-50%, -50%);
+   button {
     color: white;
     background: none;
   }
@@ -151,20 +151,8 @@ const Wrapper = styled.section`
   .options {
     margin-top: 10px;
   }
-  @media (min-width: 425px) {
-    width: 93%;
-  }
-  @media (min-width: 768px) {
-    width: 450px;
-    left: 20%;
-  }
-  @media (min-width: 1024px) {
-    width: 450px;
-    left: 26%;
-  }
-  @media (min-width: 1440px) {
-    width: 450px;
-    left: 33%;
+  @media (min-width:768px) {
+    width: 400px;
   }
 `;
 
