@@ -23,7 +23,9 @@ const SingleCountry = () => {
         <div>
           <div className="header">
             <Link to="/" className="link">
-              <button type="button">back</button>
+              <button type="button">
+                <i className="fa-solid fa-angle-left"></i>
+              </button>
             </Link>
             <h2>Country details</h2>
           </div>
@@ -45,10 +47,23 @@ const SingleCountry = () => {
         </div>
       )}
     </Wrapper>
-  );
+  )
 };
 
 const Wrapper = styled.section`
-`;
+  width: 100%;
+  .header {
+    display: flex;
+    flex-direction: raws;
+    justify-content: start;
+    background-color: white;
+    padding: 10px;
+    align-items: center;
+    gap: 60px;
+    h2 {
+      color: #192a38;
+    }
+  }
+`
 
 export default SingleCountry;

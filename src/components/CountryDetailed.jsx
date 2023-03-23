@@ -21,7 +21,6 @@ const CountryDetailed = ({
       <h1>{name}</h1>
     </div>
     <div className="country-details-container">
-      <h3>Details</h3>
       <div className="country-details">
         <div className="detail">
           <h4>Capital</h4>
@@ -54,24 +53,30 @@ const CountryDetailed = ({
           ))}
         </div>
         {currency && (
-        <div className="detail">
-          <h4>Currency symbol</h4>
-          {Object.values(currency).map((curr) => (
-            <p key={curr.name}>{curr.symbol}</p>
-          ))}
-          <h4>Currency</h4>
-          {Object.values(currency).map((curr) => (
-            <p key={curr.name}>{curr.name}</p>
-          ))}
-        </div>
+          <div className="detail">
+            <h4>Currency symbol</h4>
+            {Object.values(currency).map((curr) => (
+              <p key={curr.name}>{curr.symbol}</p>
+            ))}
+          </div>
+        )}
+        {currency && (
+          <div className="detail">
+            <h4>Currency</h4>
+            {Object.values(currency).map((curr) => (
+              <p key={curr.name}>{curr.name}</p>
+            ))}
+          </div>
         )}
         {borders && (
-        <div className="detail">
-          <h4>Borders</h4>
-          {Object.values(borders).map((country) => (
-            <p key={country}>{country}</p>
-          ))}
-        </div>
+          <div className="detail">
+            <h4>Borders</h4>
+            <div className='borders'>
+              {Object.values(borders).map((country) => (
+                <p key={country}>{country}</p>
+              ))}
+            </div>
+          </div>
         )}
         <div className="detail">
           <h4>Native common name</h4>
@@ -86,10 +91,9 @@ const CountryDetailed = ({
           ))}
         </div>
       </div>
-    </div>
-    {' '}
+    </div>{' '}
   </Wrapper>
-);
+)
 CountryDetailed.defaultProps = {
   capital: '',
   currency: '',
@@ -132,4 +136,37 @@ CountryDetailed.propTypes = {
 export default CountryDetailed;
 
 const Wrapper = styled.section`
-`;
+  background-color: white;
+  color: #192a38;
+  width: 100%;
+  h1 {
+    padding: 20px 10px 20px 10px;
+    font-size: 25px;
+    color: #192a38;
+    border-bottom: 1px solid  #192a38;
+    text-align: center;
+  }
+  .flag {
+    width: 100%;
+  }
+  .detail {
+    display: flex;
+    padding: 20px 10px 20px 10px;
+    justify-content: space-between;
+    justify-content; center;
+    align-items: center;
+    border-bottom: 0.6px solid grey;
+    h4 {
+      width: 40%;
+      font-size: 20px;
+    }
+    p {
+      width: 30%;
+      text-align: center;
+    }
+    .borders {
+      width: 20%;
+    }
+  }
+ 
+`

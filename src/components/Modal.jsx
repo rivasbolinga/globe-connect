@@ -32,7 +32,7 @@ const Modal = () => {
             dispatch(closeModal());
           }}
         >
-          close
+          <i className="fa-solid fa-xmark" />
         </button>
         <h2>Select Continent</h2>
         <div className="line" />
@@ -124,10 +124,34 @@ const Modal = () => {
   );
 };
 const Wrapper = styled.section`
-width: 90%;
-height:90%;
-background-color: white;
-color:black;
-`;
+
+  width: 325px;
+  height: 325px;
+  border-radius: 10px;
+  border: 4px solid white;
+  background-color: white;
+  color: white;
+  position: fixed;
+  top: 20%;
+  left: 27%;
+  background-color: #535bf2;
+  padding: 10px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_Map_Blank.svg/1600px-World_Map_Blank.svg.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 130px;
+
+  button {
+    color: white;
+    background: none;
+  }
+  .line {
+    height: 2px;
+    background-color: white;
+  }
+  .options {
+    margin-top: 10px;
+  }
+`
 
 export default Modal;
