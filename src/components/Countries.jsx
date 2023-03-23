@@ -8,7 +8,6 @@ const Countries = ({
 }) => (
   <Wrapper className="country-card">
     <Link to={`/country/${num}`} className="link">
-      {console.log('num here', num)}
       <img src={flag.png} alt={flag.alt} className="flag" />
       <div className="text">
         <h2>{name}</h2>

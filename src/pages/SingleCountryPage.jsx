@@ -6,17 +6,15 @@ import { fetchCountries, selectCountries } from '../redux/countriesSlice';
 import CountryDetailed from '../components/CountryDetailed';
 
 const SingleCountry = () => {
-  const { id } = useParams();
-  console.log(id);
+  const { id } = useParams(); // -take the id from the state.
   const dispatch = useDispatch();
   const { countries } = useSelector(selectCountries);
-  console.log(countries);
   useEffect(() => {
     if (!countries.length) {
       dispatch(fetchCountries());
     }
   }, [countries, dispatch]);
-
+  // -- Create a new array with just the country that has the same id than the one clicked.
   const country = countries.find((country) => country.cca3 === id);
   return (
     <Wrapper>
