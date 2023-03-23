@@ -50,6 +50,7 @@
 <img align="center" src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="react" width="60" height="60"/></a>
 <a href="https://redux-toolkit.js.org/" target="_blank" rel="noreferrer">
 <img align="center" src="https://user-images.githubusercontent.com/103900838/222968100-66b1cdba-dcbe-4047-a88f-3f55ccf983ee.svg" alt="redux" width="60" height="60"/></a>
+<a href="https://jestjs.io/" target="_blank"><img align="center" src="https://user-images.githubusercontent.com/103900838/219062261-8a9b9a82-2967-4e21-abff-42005e4e6048.svg" alt="jest" width="55" height="55"/></a>
 
 
 
@@ -151,10 +152,10 @@ npx eslint "**/*.{js,jsx}"
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[ Responsive]**
-- [ ] **[ Navbar ]**
-- [ ] **[About section]**
-- [ ] **[Desktop version]**
+- [ ] **Responsive**
+- [ ] **Navbar**
+- [ ] **About section**
+- [ ] **Desktop version**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -168,7 +169,7 @@ npx eslint "**/*.{js,jsx}"
 I would like to thank - [ Microverse]
  **![](https://img.shields.io/badge/Microverse-blueviolet)**
 
-<a href="https://www.flaticon.com/free-icons/book-shop" title="book shop icons">Book shop icons created by Freepik - Flaticon</a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
@@ -183,7 +184,7 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/rivasbolinga/React-Math-magicians/blob/1-setup/MIT.md) licensed.
+This project is [MIT](https://github.com/rivasbolinga/Countries-React-Redux/blob/final/MIT.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
