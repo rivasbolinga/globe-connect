@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Countries component renders correctly 1`] = `
-<section
-  className="sc-beqWaB hZTBNn country-card"
+<div
+  className="sc-beqWaB bBCdOB country-card"
 >
   <a
     className="link"
@@ -14,30 +14,27 @@ exports[`Countries component renders correctly 1`] = `
       className="flag"
       src="flag.png"
     />
-    <h2>
-      Country Name
-    </h2>
-    <p>
-      <span>
-        Capital:
-      </span>
-       
-      Capital City
-    </p>
-    <p>
-      <span>
-        Population:
-      </span>
-       
-      1000000
-    </p>
-    <p>
-      <span>
-        Region:
-      </span>
-       
-      Region
-    </p>
+    <div
+      className="text"
+    >
+      <h2>
+        Country Name
+      </h2>
+      <p>
+        <span>
+          Capital:
+        </span>
+         
+        Capital City
+      </p>
+      <p>
+        <span>
+          Continent:
+        </span>
+         
+        Region
+      </p>
+    </div>
   </a>
-</section>
+</div>
 `;
