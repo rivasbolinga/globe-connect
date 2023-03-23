@@ -1,0 +1,140 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Modal component > should render correctly 1`] = `
+<section
+  className="sc-beqWaB gELQXw"
+>
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa-solid fa-xmark"
+      />
+    </button>
+    <h2>
+      Select Continent
+    </h2>
+    <div
+      className="line"
+    />
+    <div
+      className="options"
+    >
+      <div>
+        <input
+          checked={true}
+          id="All"
+          onChange={[Function]}
+          type="radio"
+          value="All"
+        />
+        <label
+          htmlFor="All"
+        >
+          All
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="Africa"
+          onChange={[Function]}
+          type="radio"
+          value="Africa"
+        />
+        <label
+          htmlFor="Africa"
+        >
+          Africa
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="Asia"
+          onChange={[Function]}
+          type="radio"
+          value="Asia"
+        />
+        <label
+          htmlFor="Asia"
+        >
+          Asia
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="Europe"
+          onChange={[Function]}
+          type="radio"
+          value="Europe"
+        />
+        <label
+          htmlFor="Europe"
+        >
+          Europe
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="North America"
+          onChange={[Function]}
+          type="radio"
+          value="North America"
+        />
+        <label
+          htmlFor="North America"
+        >
+          North America
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="South America"
+          onChange={[Function]}
+          type="radio"
+          value="South America"
+        />
+        <label
+          htmlFor="South America"
+        >
+          South America
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="Oceania"
+          onChange={[Function]}
+          type="radio"
+          value="Oceania"
+        />
+        <label
+          htmlFor="Oceania"
+        >
+          Oceania
+        </label>
+      </div>
+      <div>
+        <input
+          checked={false}
+          id="Antarctica"
+          onChange={[Function]}
+          type="radio"
+          value="Antarctica"
+        />
+        <label
+          htmlFor="Antarctica"
+        >
+          Antarctica
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,201 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CountryDetailed > should match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-beqWaB eXZiMg"
+  >
+    <div
+      class="country-selected"
+    >
+      <img
+        alt="Flag Alt Text"
+        class="flag"
+        src="flag.png"
+      />
+      <h1>
+        Country Name
+      </h1>
+    </div>
+    <div
+      class="country-details-container"
+    >
+      <div
+        class="country-details"
+      >
+        <div
+          class="detail"
+        >
+          <h4>
+            Capital
+          </h4>
+          <p>
+            Capital City
+          </p>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Region
+          </h4>
+          <p>
+            Region Name
+          </p>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Population
+          </h4>
+          <p>
+            1000000
+          </p>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Official name
+          </h4>
+          <p>
+            Official Name
+          </p>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Subregion
+          </h4>
+          <p>
+            Subregion Name
+          </p>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            tld
+          </h4>
+          <p>
+            .tld
+          </p>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Languages
+          </h4>
+          <div
+            class="borders"
+          >
+            <p
+              class="borders-text"
+            >
+              Language 1
+            </p>
+            <p
+              class="borders-text"
+            >
+              Language 2
+            </p>
+          </div>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Currency symbol
+          </h4>
+          <div
+            class="borders"
+          >
+            <p
+              class="borders-text"
+            />
+            <p
+              class="borders-text"
+            />
+          </div>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Currency
+          </h4>
+          <div
+            class="borders"
+          >
+            <p
+              class="borders-text"
+            />
+            <p
+              class="borders-text"
+            />
+          </div>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Borders
+          </h4>
+          <div
+            class="borders"
+          >
+            <p
+              class="borders-text"
+            >
+              Border 1
+            </p>
+            <p
+              class="borders-text"
+            >
+              Border 2
+            </p>
+          </div>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Native common name
+          </h4>
+          <div
+            class="borders"
+          >
+            <p
+              class="borders-text"
+            />
+            <p
+              class="borders-text"
+            />
+          </div>
+        </div>
+        <div
+          class="detail"
+        >
+          <h4>
+            Native official name
+          </h4>
+          <div
+            class="borders"
+          >
+            <p
+              class="borders-text"
+            />
+            <p
+              class="borders-text"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+     
+  </section>
+</DocumentFragment>
+`;

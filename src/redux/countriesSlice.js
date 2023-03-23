@@ -26,7 +26,8 @@ const countriesSlice = createSlice({
       }
       return {
         ...state,
-        countries: state.countries.filter((count) => count.continents.includes(selectedContinent)),
+        countries: state.countries.filter((c) => c.continents
+        && c.continents.includes(selectedContinent)),
       };
     },
   },
