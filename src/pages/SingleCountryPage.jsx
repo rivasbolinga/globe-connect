@@ -7,9 +7,10 @@ import CountryDetailed from '../components/CountryDetailed';
 
 const SingleCountry = () => {
   const { id } = useParams();
+  console.log(id);
   const dispatch = useDispatch();
   const { countries } = useSelector(selectCountries);
-
+  console.log(countries);
   useEffect(() => {
     if (!countries.length) {
       dispatch(fetchCountries());
@@ -24,7 +25,7 @@ const SingleCountry = () => {
           <div className="header">
             <Link to="/" className="link">
               <button type="button">
-                <i className="fa-solid fa-angle-left"></i>
+                <i className="fa-solid fa-angle-left" />
               </button>
             </Link>
             <h2>Country details</h2>
@@ -47,7 +48,7 @@ const SingleCountry = () => {
         </div>
       )}
     </Wrapper>
-  )
+  );
 };
 
 const Wrapper = styled.section`
@@ -64,6 +65,9 @@ const Wrapper = styled.section`
       color: #192a38;
     }
   }
-`
+  @media (min-width:768px) {
+    width:425px;
+  }
+`;
 
 export default SingleCountry;

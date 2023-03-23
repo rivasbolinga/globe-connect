@@ -124,8 +124,7 @@ const Modal = () => {
   );
 };
 const Wrapper = styled.section`
-
-  width: 325px;
+  width: 92%;
   height: 325px;
   border-radius: 10px;
   border: 4px solid white;
@@ -133,7 +132,7 @@ const Wrapper = styled.section`
   color: white;
   position: fixed;
   top: 20%;
-  left: 27%;
+  left: 0;
   background-color: #535bf2;
   padding: 10px;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_Map_Blank.svg/1600px-World_Map_Blank.svg.png');
@@ -152,6 +151,21 @@ const Wrapper = styled.section`
   .options {
     margin-top: 10px;
   }
-`
+  @media (min-width: 425px) {
+    width: 93%;
+  }
+  @media (min-width: 768px) {
+    width: 450px;
+    left: 20%;
+  }
+  @media (min-width: 1024px) {
+    width: 450px;
+    left: 26%;
+  }
+  @media (min-width: 1440px) {
+    width: 450px;
+    left: 33%;
+  }
+`;
 
 export default Modal;

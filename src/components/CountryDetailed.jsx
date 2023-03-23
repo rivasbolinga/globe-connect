@@ -61,7 +61,7 @@ const CountryDetailed = ({
             <h4>Currency symbol</h4>
             <div className="borders">
               {Object.values(currency).map((curr) => (
-                <p className='borders-text' key={curr.name}>{curr.symbol}</p>
+                <p className="borders-text" key={curr.name}>{curr.symbol}</p>
               ))}
             </div>
           </div>
@@ -83,7 +83,7 @@ const CountryDetailed = ({
             <h4>Borders</h4>
             <div className="borders">
               {Object.values(borders).map((country) => (
-                <p className='borders-text' key={country}>{country}</p>
+                <p className="borders-text" key={country}>{country}</p>
               ))}
             </div>
           </div>
@@ -109,9 +109,10 @@ const CountryDetailed = ({
           </div>
         </div>
       </div>
-    </div>{' '}
+    </div>
+    {' '}
   </Wrapper>
-)
+);
 CountryDetailed.defaultProps = {
   capital: '',
   currency: '',
@@ -191,4 +192,4 @@ const Wrapper = styled.section`
     }
   }
  
-`
+`;

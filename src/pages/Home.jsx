@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { fetchCountries, selectCountries } from '../redux/countriesSlice';
 import Countries from '../components/Countries';
 import { openModal, selectSelectedContinent } from '../redux/modalSlice';
+import continentImages from '../utils/utils';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -22,12 +23,10 @@ const Home = () => {
   return (
     <Wrapper className="home">
       <div className="header">
-        { selectedContinent && (
         <img
           alt="world glove icon"
           src="https://img.icons8.com/dusk/64/null/geography--v1.png"
         />
-        )}
         <h1>Countries in the world</h1>
         <button type="button" onClick={() => dispatch(openModal())}>
           {' '}
@@ -35,14 +34,24 @@ const Home = () => {
         </button>
       </div>
       <div className="picture-container">
-        <img
-          className="picture"
-          alt="world map"
-          src="https://www.worldatlas.com/r/w960-q80/upload/f4/e0/49/shutterstock-1665254809.png"
-        />
+        {selectedContinent && selectedContinent !== 'All' && continentImages[selectedContinent] ? (
+          <img
+            className="picture"
+            alt={selectedContinent}
+            src={continentImages[selectedContinent]}
+          />
+        ) : (
+          <img
+            className="picture"
+            alt="world map"
+            src={continentImages.All}
+          />
+        )}
       </div>
       <div className="how-many">
-        <h3>{selectedContinent || 'How many countries there are in the world?'}</h3>
+        <h3>
+          {selectedContinent || 'How many countries there are in the world?'}
+        </h3>
       </div>
       <div className="country-list">
         {filteredCountries.length
