@@ -12,11 +12,10 @@
  <a name="about-project"></a>
 <!-- PROJECT DESCRIPTION -->
 **[ Countries ]** is a webapp that renders the list of the 250 worldwide countries name flag and its continent. Click in any country and you will go to a separated page to see all de data from that country. Lastly, you can also filter the countries you see by continent. 
+
+
+<img width="424" alt="Screenshot 2023-03-23 at 13 27 29" src="https://user-images.githubusercontent.com/103900838/227217473-ded961e8-42fe-45a7-bcaa-d61176566aab.png">
 </div>
-
-<img width="940" alt="Screenshot 2023-03-05 at 15 33 25" src="https://user-images.githubusercontent.com/103900838/222966922-de22d2ef-1bec-4849-920d-b391367d68fa.png">
-
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -48,12 +47,9 @@
 <a href="https://www.w3.org/html/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="55" height="55"/></a><a href="https://www.w3schools.com/css/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="55" height="55"/></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="55" height="55"/></a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-<img align="center" src="https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg" alt="react" width="60" height="60"/></a>
+<img align="center" src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="react" width="60" height="60"/></a>
 <a href="https://redux-toolkit.js.org/" target="_blank" rel="noreferrer">
 <img align="center" src="https://user-images.githubusercontent.com/103900838/222968100-66b1cdba-dcbe-4047-a88f-3f55ccf983ee.svg" alt="redux" width="60" height="60"/></a>
-<a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
-<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="sass" width="60" height="60"/></a>
-
 
 
 
@@ -62,12 +58,12 @@
 
 <!-- > Describe between 1-3 key features of the application.-->
 
-- [ ] **[list of 250 countries]**
-- [ ] **[Data coming from Api https://restcountries.com]**
-- [ ] **[Responsive but better working for mobile]**
-- [ ] **[unique page for every country information like: population, currencies, languages....]**
-- [ ] **[Filter countries by continent]**
-- [ ] **[Done with React and Redux toolkit]**
+- [ ] **List of 250 countries**
+- [ ] **Data coming from Api https://restcountries.com**
+- [ ] **Responsive but better working for mobile**
+- [ ] **Unique page for every country information like: population, currencies, languages and much more!**
+- [ ] **Filter countries by continent**
+- [ ] **Done with React and Redux toolkit**
 
 
 
@@ -77,7 +73,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can see the live version here: 👉🏼 https://style--fluffy-khapse-6a9aff.netlify.app/
+You can see the live version 📍 [here](https://style--fluffy-khapse-6a9aff.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
