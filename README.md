@@ -78,6 +78,14 @@ You can see the live version 📍 [here](https://style--fluffy-khapse-6a9aff.net
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- VIDEO  -->
+
+##  VIDEO <a name="live-demo"></a>
+
+🎥 Don't miss my video demostration. [Go here](https://www.loom.com/share/6aeec64c82f94711986a1d52e1b5e473)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
