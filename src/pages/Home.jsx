@@ -116,7 +116,6 @@ const Wrapper = styled.section`
     margin-top: 10px;
     width: 280px;
     height: auto;
-    border: 5px solid #bababa;
   }
   .picture {
     width: 100%;
