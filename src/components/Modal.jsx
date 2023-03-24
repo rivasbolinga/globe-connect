@@ -124,7 +124,7 @@ const Modal = () => {
   );
 };
 const Wrapper = styled.section`
-  width: 92%;
+  width: 90%;
   height: 325px;
   border-radius: 10px;
   border: 4px solid white;

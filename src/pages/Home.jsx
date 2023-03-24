@@ -51,7 +51,7 @@ const Home = () => {
 
       <div className="how-many">
         <h3>
-          {selectedContinent || 'How many countries there are in the world?'}
+          {selectedContinent || 'List of countries'}
         </h3>
       </div>
       <div className="country-list">
@@ -116,6 +116,7 @@ const Wrapper = styled.section`
     border-bottom: 2px solid #182734;
     padding: 10px;
     text-align: center;
+    font-size: 20px;
   }
   .country-list {
     display: grid;
