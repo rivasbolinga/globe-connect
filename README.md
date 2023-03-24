@@ -50,7 +50,7 @@
 <img align="center" src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="react" width="60" height="60"/></a>
 <a href="https://redux-toolkit.js.org/" target="_blank" rel="noreferrer">
 <img align="center" src="https://user-images.githubusercontent.com/103900838/222968100-66b1cdba-dcbe-4047-a88f-3f55ccf983ee.svg" alt="redux" width="60" height="60"/></a>
-<a href="https://jestjs.io/" target="_blank"><img align="center" src="https://user-images.githubusercontent.com/103900838/219062261-8a9b9a82-2967-4e21-abff-42005e4e6048.svg" alt="jest" width="55" height="55"/></a>
+<a href="https://vitest.dev/" target="_blank"><img align="center" src="https://vitest.dev/logo-shadow.svg" alt="vitest" width="55" height="55"/></a>
 
 
 
