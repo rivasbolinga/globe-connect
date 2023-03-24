@@ -5,7 +5,7 @@ import { fetchCountries, selectCountries } from '../redux/countriesSlice';
 import Countries from '../components/Countries';
 import { openModal, selectSelectedContinent } from '../redux/modalSlice';
 import { continentData, continentImages } from '../utils/utils';
-console.log(continentData)
+
 const Home = () => {
   const dispatch = useDispatch();
   const { countries } = useSelector(selectCountries);
@@ -35,30 +35,30 @@ const Home = () => {
       </div>
       <div className="main-content">
         <div className="picture-container">
-          {selectedContinent &&
-          selectedContinent !== 'All' &&
-          continentImages[selectedContinent] ? (
+          {selectedContinent
+          && selectedContinent !== 'All'
+          && continentImages[selectedContinent] ? (
             <img
               className="picture"
               alt={selectedContinent}
               src={continentImages[selectedContinent]}
             />
-          ) : (
-            <img
-              className="picture"
-              alt="world map"
-              src={continentImages.All}
-            />
-          )}
+            ) : (
+              <img
+                className="picture"
+                alt="world map"
+                src={continentImages.All}
+              />
+            )}
         </div>
         <div className="text-conainer-cont">
-          {selectedContinent &&
-          selectedContinent !== 'All' &&
-          continentData[selectedContinent] ? (
+          {selectedContinent
+          && selectedContinent !== 'All'
+          && continentData[selectedContinent] ? (
             <p className="continent-text">{continentData[selectedContinent]}</p>
-          ) : (
-            <p className="continent-text">{continentData.All}</p>
-          )}
+            ) : (
+              <p className="continent-text">{continentData.All}</p>
+            )}
         </div>
       </div>
       <div className="how-many">
@@ -67,30 +67,30 @@ const Home = () => {
       <div className="country-list">
         {filteredCountries.length
           ? filteredCountries.map((country) => (
-              <Countries
-                key={country.cca3}
-                num={country.cca3}
-                flag={country.flags}
-                name={country.name.common}
-                capital={country.capital}
-                population={country.population}
-                region={country.region}
-              />
-            ))
+            <Countries
+              key={country.cca3}
+              num={country.cca3}
+              flag={country.flags}
+              name={country.name.common}
+              capital={country.capital}
+              population={country.population}
+              region={country.region}
+            />
+          ))
           : countries.map((country) => (
-              <Countries
-                key={country.cca3}
-                num={country.cca3}
-                flag={country.flags}
-                name={country.name.common}
-                capital={country.capital}
-                population={country.population}
-                region={country.region}
-              />
-            ))}
+            <Countries
+              key={country.cca3}
+              num={country.cca3}
+              flag={country.flags}
+              name={country.name.common}
+              capital={country.capital}
+              population={country.population}
+              region={country.region}
+            />
+          ))}
       </div>
     </Wrapper>
-  )
+  );
 };
 
 const Wrapper = styled.section`
@@ -209,6 +209,6 @@ const Wrapper = styled.section`
       padding: 50px;
     }
   }
-`
+`;
 
 export default Home;

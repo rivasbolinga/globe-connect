@@ -64,7 +64,7 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width:768px) {
-    width:425px;
+    width: 100%;
   }
 `;
 

@@ -16,7 +16,7 @@ const continentImages = {
 };
 
 const continentData = {
-  All:"How many countries are there? is that it depends on who's doing the counting. The United Nations, for example, recognizes 251 countries and territories. The United States, however, officially recognizes fewer than 200 nations. Ultimately, the best answer is that there are 196 countries in the world." ,
+  All: "How many countries are there? is that it depends on who's doing the counting. The United Nations, for example, recognizes 251 countries and territories. The United States, however, officially recognizes fewer than 200 nations. Ultimately, the best answer is that there are 196 countries in the world.",
   Europe:
     'Europe facts tell us there are 50 countries in Europe, including the world’s smallest country, Vatican City. The most visited countries in Europe are France, Spain, Italy, the United Kingdom, and Germany.Europe is home to five transcontinental countries that straddle the border between Europe and Asia. These countries are Azerbaijan, Georgia, Kazakhstan, Russia, and Turkey. It’s interesting to note that even though only part of Russia is on the European continent, it is still the largest country in Europe. Russia isn’t the only transcontinental country of note – Turkey happens to be the home of the largest European city, Istanbul.',
   'South America':
@@ -30,8 +30,8 @@ const continentData = {
   Asia: 'Asia, the world’s largest and most diverse continent. It occupies the eastern four-fifths of the giant Eurasian landmass. Asia is more a geographic term than a homogeneous continent, and the use of the term to describe such a vast area always carries the potential of obscuring the enormous diversity among the regions it encompasses. Asia has both the highest and the lowest points on the surface of Earth, has the longest coastline of any continent, is subject overall to the world’s widest climatic extremes, and, consequently, produces the most varied forms of vegetation and animal life on Earth. ',
   Antarctica:
     'Antarctica, the world’s southernmost and fifth largest continent. Its landmass is almost wholly covered by a vast ice sheet.Often described as a continent of superlatives, Antarctica is not only the world’s southernmost continent. It is also the world’s highest, driest, windiest, coldest, and iciest continent. Antarctica is about 5.5 million square miles (14.2 million square km) in size, and thick ice covers about 98 percent of the land. The continent is divided into East Antarctica (which is largely composed of a high ice-covered plateau) and West Antarctica (which is largely an ice sheet covering an archipelago of mountainous islands).',
-}
-export { 
+};
+export {
   continentImages,
-  continentData
-}
+  continentData,
+};

@@ -163,6 +163,6 @@ const Wrapper = styled.section`
       gap: 8px;
     }
   }
-`
+`;
 
 export default Modal;
