@@ -6,11 +6,11 @@
         />
   <br/>
 
-# 📖 [ Countries ] <a name="about-project"></a>
+# 📖  Countries list <a name="about-project"></a>
 
  <a name="about-project"></a>
 <!-- PROJECT DESCRIPTION -->
-**[ Countries ]** is a webapp that renders the list of the 250 worldwide countries name flag and its continent. Click in any country and you will go to a separated page to see all de data from that country. Lastly, you can also filter the countries you see by continent. 
+**Countries list** is a webapp that renders the list of the 250 worldwide countries name flag and its continent. Click in any country and you will go to a separated page to see all de data from that country. Lastly, you can also filter the countries you see by continent. 
 
 </div>
 
