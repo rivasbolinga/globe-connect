@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { fetchCountries, selectCountries } from '../redux/countriesSlice';
 import Countries from '../components/Countries';
 import { openModal, selectSelectedContinent } from '../redux/modalSlice';
-import continentImages from '../utils/utils';
-
+import { continentData, continentImages } from '../utils/utils';
+console.log(continentData)
 const Home = () => {
   const dispatch = useDispatch();
   const { countries } = useSelector(selectCountries);
@@ -33,54 +33,64 @@ const Home = () => {
           <i className="fa-solid fa-gear" />
         </button>
       </div>
-      <div className="picture-container">
-        {selectedContinent && selectedContinent !== 'All' && continentImages[selectedContinent] ? (
-          <img
-            className="picture"
-            alt={selectedContinent}
-            src={continentImages[selectedContinent]}
-          />
-        ) : (
-          <img
-            className="picture"
-            alt="world map"
-            src={continentImages.All}
-          />
-        )}
+      <div className="main-content">
+        <div className="picture-container">
+          {selectedContinent &&
+          selectedContinent !== 'All' &&
+          continentImages[selectedContinent] ? (
+            <img
+              className="picture"
+              alt={selectedContinent}
+              src={continentImages[selectedContinent]}
+            />
+          ) : (
+            <img
+              className="picture"
+              alt="world map"
+              src={continentImages.All}
+            />
+          )}
+        </div>
+        <div className="text-conainer-cont">
+          {selectedContinent &&
+          selectedContinent !== 'All' &&
+          continentData[selectedContinent] ? (
+            <p className="continent-text">{continentData[selectedContinent]}</p>
+          ) : (
+            <p className="continent-text">{continentData.All}</p>
+          )}
+        </div>
       </div>
-
       <div className="how-many">
-        <h3>
-          {selectedContinent || 'List of countries'}
-        </h3>
+        <h3>{selectedContinent || 'List of countries'}</h3>
       </div>
       <div className="country-list">
         {filteredCountries.length
           ? filteredCountries.map((country) => (
-            <Countries
-              key={country.cca3}
-              num={country.cca3}
-              flag={country.flags}
-              name={country.name.common}
-              capital={country.capital}
-              population={country.population}
-              region={country.region}
-            />
-          ))
+              <Countries
+                key={country.cca3}
+                num={country.cca3}
+                flag={country.flags}
+                name={country.name.common}
+                capital={country.capital}
+                population={country.population}
+                region={country.region}
+              />
+            ))
           : countries.map((country) => (
-            <Countries
-              key={country.cca3}
-              num={country.cca3}
-              flag={country.flags}
-              name={country.name.common}
-              capital={country.capital}
-              population={country.population}
-              region={country.region}
-            />
-          ))}
+              <Countries
+                key={country.cca3}
+                num={country.cca3}
+                flag={country.flags}
+                name={country.name.common}
+                capital={country.capital}
+                population={country.population}
+                region={country.region}
+              />
+            ))}
       </div>
     </Wrapper>
-  );
+  )
 };
 
 const Wrapper = styled.section`
@@ -89,6 +99,9 @@ const Wrapper = styled.section`
   width: 100%;
   align-items: center;
   background-color: white;
+  .text-conainer-cont {
+    display: none;
+  }
   .header {
     display: flex;
     gap: 15px;
@@ -124,13 +137,46 @@ const Wrapper = styled.section`
     gap: 0;
   }
   @media (min-width: 425px) {
-    width: 425px;
+    width: 100%;
     .picture-container {
       width: 400px;
       height: auto;
       border: 5px solid #bababa;
     }
   }
-`;
+  @media (min-width: 768px) {
+    .main-content {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      .text-conainer-cont {
+        display: flex;
+        color: black;
+        width: 40%;
+        font-size: 17px;
+      }
+      .picture-container {
+        width: 45%;
+        border: none;
+      }
+      .picture {
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .how-many {
+      margin-top: 60px;
+    }
+    .main-content {
+      margin-top: 60px;
+    }
+    .continent-text {
+      font-size: 22px;
+    }
+  }
+`
 
 export default Home;

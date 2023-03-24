@@ -47,16 +47,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   text-align: center;
  }
- .link:hover {
-  opacity: 1; 
-}
-  .link:hover ~ .link {
-    opacity: 0.5;
-  }
-  
-  section:hover {
-    border: 1px solid;
-  }
+
   .flag {
     width: 100%;
     height: 150px;
@@ -80,7 +71,9 @@ span {
 }
   }
 }
+@media (min-width: 768px) {
 
+}
 `;
 
 export default Countries;
