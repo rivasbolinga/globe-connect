@@ -6,16 +6,16 @@
         />
   <br/>
 
-
 # 📖 [ Countries ] <a name="about-project"></a>
 
  <a name="about-project"></a>
 <!-- PROJECT DESCRIPTION -->
 **[ Countries ]** is a webapp that renders the list of the 250 worldwide countries name flag and its continent. Click in any country and you will go to a separated page to see all de data from that country. Lastly, you can also filter the countries you see by continent. 
 
-
-<img width="424" alt="Screenshot 2023-03-23 at 13 27 29" src="https://user-images.githubusercontent.com/103900838/227217473-ded961e8-42fe-45a7-bcaa-d61176566aab.png">
 </div>
+
+![all-devices-black (2)](https://user-images.githubusercontent.com/103900838/227513328-caec0ad1-22a6-4651-9eed-5b11018d2176.png)
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
