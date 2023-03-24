@@ -140,7 +140,7 @@ const Wrapper = styled.section`
   background-repeat: no-repeat;
   background-position: 130px;
   transform: translate(-50%, -50%);
-   button {
+  button {
     color: white;
     background: none;
   }
@@ -151,9 +151,18 @@ const Wrapper = styled.section`
   .options {
     margin-top: 10px;
   }
-  @media (min-width:768px) {
-    width: 400px;
+  @media (min-width: 768px) {
+    width: 500px;
+    height: 420px;
+    background-position: 160px;
+    .options {
+      margin-top: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
   }
-`;
+`
 
 export default Modal;

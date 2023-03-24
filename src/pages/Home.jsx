@@ -176,6 +176,21 @@ const Wrapper = styled.section`
       gap: 50px;
       padding: 50px;
     }
+    .header {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid grey;
+      width: 97%;
+      img {
+        width: 60px;
+      }
+      button {
+        font-size: 25px;
+      }
+    }
   }
 
   @media (min-width: 1440px) {
