@@ -165,7 +165,19 @@ const Wrapper = styled.section`
         width: 100%;
       }
     }
+    .country-list {
+      padding: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
   }
+  @media (min-width: 1000px) {
+    .country-list {
+      gap: 50px;
+      padding: 50px;
+    }
+  }
+
   @media (min-width: 1440px) {
     .how-many {
       margin-top: 60px;
@@ -174,7 +186,12 @@ const Wrapper = styled.section`
       margin-top: 60px;
     }
     .continent-text {
-      font-size: 22px;
+      font-size: 18px;
+    }
+    .country-list {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 50px;
     }
   }
 `
