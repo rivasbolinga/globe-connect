@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { fetchCountries, selectCountries } from '../redux/countriesSlice';
 import Countries from '../components/Countries';
 import { openModal, selectSelectedContinent } from '../redux/modalSlice';
-import continentImages from '../utils/utils';
+import { continentData, continentImages } from '../utils/utils';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -33,26 +33,36 @@ const Home = () => {
           <i className="fa-solid fa-gear" />
         </button>
       </div>
-      <div className="picture-container">
-        {selectedContinent && selectedContinent !== 'All' && continentImages[selectedContinent] ? (
-          <img
-            className="picture"
-            alt={selectedContinent}
-            src={continentImages[selectedContinent]}
-          />
-        ) : (
-          <img
-            className="picture"
-            alt="world map"
-            src={continentImages.All}
-          />
-        )}
+      <div className="main-content">
+        <div className="picture-container">
+          {selectedContinent
+          && selectedContinent !== 'All'
+          && continentImages[selectedContinent] ? (
+            <img
+              className="picture"
+              alt={selectedContinent}
+              src={continentImages[selectedContinent]}
+            />
+            ) : (
+              <img
+                className="picture"
+                alt="world map"
+                src={continentImages.All}
+              />
+            )}
+        </div>
+        <div className="text-conainer-cont">
+          {selectedContinent
+          && selectedContinent !== 'All'
+          && continentData[selectedContinent] ? (
+            <p className="continent-text">{continentData[selectedContinent]}</p>
+            ) : (
+              <p className="continent-text">{continentData.All}</p>
+            )}
+        </div>
       </div>
-
       <div className="how-many">
-        <h3>
-          {selectedContinent || 'How many countries there are in the world?'}
-        </h3>
+        <h3>{selectedContinent || 'List of countries'}</h3>
       </div>
       <div className="country-list">
         {filteredCountries.length
@@ -89,6 +99,9 @@ const Wrapper = styled.section`
   width: 100%;
   align-items: center;
   background-color: white;
+  .text-conainer-cont {
+    display: none;
+  }
   .header {
     display: flex;
     gap: 15px;
@@ -116,6 +129,7 @@ const Wrapper = styled.section`
     border-bottom: 2px solid #182734;
     padding: 10px;
     text-align: center;
+    font-size: 20px;
   }
   .country-list {
     display: grid;
@@ -123,11 +137,76 @@ const Wrapper = styled.section`
     gap: 0;
   }
   @media (min-width: 425px) {
-    width: 425px;
+    width: 100%;
     .picture-container {
       width: 400px;
       height: auto;
       border: 5px solid #bababa;
+    }
+  }
+  @media (min-width: 768px) {
+    .main-content {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      .text-conainer-cont {
+        display: flex;
+        color: black;
+        width: 40%;
+        font-size: 17px;
+      }
+      .picture-container {
+        width: 45%;
+        border: none;
+      }
+      .picture {
+        width: 100%;
+      }
+    }
+    .country-list {
+      padding: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+  @media (min-width: 1000px) {
+    .country-list {
+      gap: 50px;
+      padding: 50px;
+    }
+    .header {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid grey;
+      width: 97%;
+      img {
+        width: 60px;
+      }
+      button {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .how-many {
+      margin-top: 60px;
+    }
+    .main-content {
+      margin-top: 60px;
+    }
+    .continent-text {
+      font-size: 18px;
+    }
+    .country-list {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 50px;
     }
   }
 `;

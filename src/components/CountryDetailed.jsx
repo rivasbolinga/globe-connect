@@ -191,5 +191,31 @@ const Wrapper = styled.section`
       width: 100%;
     }
   }
- 
+ @media (min-width: 768px) {
+  .country-selected {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+  }
+   .flag {
+    width: 60%;
+  }
+   h1 {
+      font-size: 30px;
+      border: none;
+    }
+    .detail {
+    justify-content: space-around;
+    justify-content; center;
+    align-items: center;
+    h4 {
+      width: 40%;
+      font-size: 20px;
+    }
+    p {
+      width: 30%;
+      text-align: center;
+    }
+ }
 `;
