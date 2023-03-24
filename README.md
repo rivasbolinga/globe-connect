@@ -138,7 +138,7 @@ npx eslint "**/*.{js,jsx}"
 
 ```
 ###  Deployment:
- I have deploy it with netifly.
+ I have deployed it with netifly.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
