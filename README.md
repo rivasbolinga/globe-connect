@@ -6,11 +6,12 @@
         />
   <br/>
 
-# 📖  Countries list <a name="about-project"></a>
+# 📖  GlobeConnect <a name="about-project"></a>
 
  <a name="about-project"></a>
 <!-- PROJECT DESCRIPTION -->
-**Countries list** is a webapp that renders the list of the 250 worldwide countries name flag and its continent. Click in any country and you will go to a separated page to see all de data from that country. Lastly, you can also filter the countries you see by continent. 
+
+GlobeConnect is a revolutionary web application that brings you an immersive experience of exploring the diverse countries of the world. With a user-friendly interface and comprehensive features, GlobeConnect allows you to effortlessly navigate through a collection of 250 countries, providing essential information at your fingertips.
 
 </div>
 
