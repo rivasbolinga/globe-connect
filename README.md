@@ -141,7 +141,6 @@ npx stylelint "**/*.{css,scss}"
 
 ```
 npx eslint "**/*.{js,jsx}"
-
 ```
 ###  Deployment:
  I have deployed it with netifly.
