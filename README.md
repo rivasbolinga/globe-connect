@@ -119,7 +119,12 @@ git clone https://github.com/rivasbolinga/Countries-React-Redux.git
 - [ ] Open the file in your code editor
 
 
+### Usage
 
+
+```
+npm start
+```
 
 ###  Instal linters for React and Redux:
 
